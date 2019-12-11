@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+
+  <title>Your deck.js Presentation</title>
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" media="screen" href="core/deck.core.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" media="screen" href="extensions/goto/deck.goto.css">
+  <link rel="stylesheet" media="screen" href="extensions/menu/deck.menu.css">
+  <link rel="stylesheet" media="screen" href="extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" media="screen" href="extensions/status/deck.status.css">
+  <link rel="stylesheet" media="screen" href="extensions/scale/deck.scale.css">
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="themes/style/web-2.0.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="themes/transition/horizontal-slide.css">
+
+  <!-- Basic black and white print styles -->
+  <link rel="stylesheet" media="print" href="core/print.css">
+
+  <!-- Required Modernizr file -->
+  <script src="modernizr.custom.js"></script>
+</head>
+<body>
+  <div class="deck-container">
+
+    <!-- Begin slides. Just make elements with a class of slide. -->
+
+    <section class="slide">
+          <h1>How many of you have ever ran into this?</h1>
+    </section>
+
+    <section class="slide">
+      <div><img src='./elems/typeError1.png'></div>
+      <div><img src='./elems/typeError2.png'></div>
+    </section>
+
+    <section class="slide">
+      <div><img src='./elems/typeError4.png'></div>
+    </section>
+
+    <section class="slide">
+      <h2 >You don't know JS...</h2>
+      <h3 class='slide'>Strong VS. Weak typing</h3>
+        <li class='slide'>strong/weak typing is about how strictly types are distinguished</li>
+        <li class='slide'>JS follows weak typing, with the ability to "cast" a value of any type to another type</li>
+        <li class='slide'><a href='https://delapouite.com/ramblings/javascript-coercion-rules.html' target="_blank">JavaScript coercion rules</a></li>
+        <ul class='slide'>(some results may surprise you)</ul>
+        <ul class='slide'><code>Example: <br> const str = 5 + 'hello' // '5hello' - perfectly OK in JS</code></ul>
+        <ul class='slide'><iframe src='./elems/wat.mp4'>WAT?</iframe></ul>
+    </section>
+
+    <section class="slide">
+        <blockquote>
+          <p><a target='_blank' href='https://devopedia.org/duck-typing'>If it walks like a duck and it quacks like a duck, then it must be a duck.</a></p>
+          <p><cite>JavaScript</a></cite></p>
+            </blockquote>
+          <h3 class='slide'>Dynamic VS. Static</h3>
+          <li class='slide'>Duck typing is the ability of a language to determine types at runtime</li>
+          <li class='slide'>JavaScript follows this duck typing principle - it assigns types to variables at runtime, based on the interpeted value.</li>
+          <ul class='slide'><code>Example: <br> const length = 12<br>
+          const num = length(54)</code></ul>
+          <ul class='slide'><code>
+            const num = length(34)<br>
+              ^
+  
+            TypeError: length is not a function
+            at Object.<anonymous> (/Users/vickimenashe/Documents/Elevation/typeScript/presentation/deck.js-latest/main.js:2:13)
+            at Module._compile (internal/modules/cjs/loader.js:959:30)
+            at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+            at Module.load (internal/modules/cjs/loader.js:815:32)
+            at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+            at Function.Module.runMain (internal/modules/cjs/loader.js:1047:10)
+            at internal/main/run_main_module.js:17:11</code></ul>
+    </section>
+
+
+    <section class="slide">
+        <blockquote>
+          <p>Explicit is better than implicit.</p>
+          <p><cite><a href='https://www.python.org/dev/peps/pep-0020/' target='_blank'>The zen of Python</a></cite></p>
+        </blockquote>
+        <h2 class='slide'>TypeScript</h2>
+        <li class='slide'>An open source language from Microsoft</li>
+        <li class='slide'>A superset of JavaScript that compiles to plain JavaScript by the browser</li>
+          <li class='slide'>Since JavaScript code is TypeScript code you can start off with JavaScript and just add some types here and there</li>
+          <li class='slide'>Flexibility comes with a price! if you are building a medium- to large-scale application, writing and managing JavaScript code could lead to many bugs...</li>
+    </section>
+
+
+    <section class='slide'>
+      <h3 class='slide'>Installing</h3>
+      <p class='slide'><code>
+        npm install -g typescript
+      </code></p>
+
+      <h3 class='slide'>Compiling</h3>
+      <p class='slide'><code>
+        tsc source.ts
+      </code></p>
+
+      <h3 class='slide'>Demo</h3>
+
+      <h3 class='slide'>Useful Links:</h3>
+      <div class='slide'>
+        <li><a href='http://www.typescriptlang.org/'>typescriptlang.org</a></li>
+        <li><a href='https://www.youtube.com/watch?v=ET4kT88JRXs'>Watch Anders Hejlsberg talk about TypeScript and Static Types</li>
+        <li><a href='https://www.typescriptlang.org/play/index.html'>Playground</a></li>
+      </div>
+    </section>
+    
+    <section class='slide'>
+      <h2>Exercises file (exercises.ts) in Git repo!</h2>
+      <ul><img src='./elems/tsMeme.png'></ul>
+    </section>
+
+
+    <!-- End slides. -->
+
+    <!-- Begin extension snippets. Add or remove as needed. -->
+
+    <!-- deck.navigation snippet -->
+    <div aria-role="navigation">
+      <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+      <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+    </div>
+
+    <!-- deck.status snippet -->
+    <p class="deck-status" aria-role="status">
+      <span class="deck-status-current"></span>
+      /
+      <span class="deck-status-total"></span>
+    </p>
+
+    <!-- deck.goto snippet -->
+    <form action="." method="get" class="goto-form">
+      <label for="goto-slide">Go to slide:</label>
+      <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+      <datalist id="goto-datalist"></datalist>
+      <input type="submit" value="Go">
+    </form>
+
+    <!-- End extension snippets. -->
+  </div>
+
+<!-- Required JS files. -->
+<script src="jquery.min.js"></script>
+<script src="core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="extensions/menu/deck.menu.js"></script>
+<script src="extensions/goto/deck.goto.js"></script>
+<script src="extensions/status/deck.status.js"></script>
+<script src="extensions/navigation/deck.navigation.js"></script>
+<script src="extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+  $(function() {
+    $.deck('.slide');
+  });
+</script>
+</body>
+</html>

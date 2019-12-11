@@ -1,0 +1,7 @@
+{
+    "compilerOptions": {
+        "target": "esnext", // compile to the lastes version of JS  instead of to ES3 (async)
+        "watch": true, // compile everytime we save the file automatically
+        // "lib": ["dom", "es2019"]
+    }
+}
